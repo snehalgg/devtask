@@ -1,0 +1,31 @@
+using System;
+
+namespace GeologyApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the type of rock: ");
+            string rockType = Console.ReadLine();
+
+            string classification = ClassifyRock(rockType);
+            Console.WriteLine($"The rock {rockType} belongs to the {classification} classification.");
+        }
+
+        static string ClassifyRock(string rockType)
+        {
+            switch (rockType.ToLower())
+            {
+                case "igneous":
+                    return "igneous";
+                case "sedimentary":
+                    return "sedimentary";
+                case "metamorphic":
+                    return "metamorphic";
+                default:
+                    return "unknown";
+            }
+        }
+    }
+}
