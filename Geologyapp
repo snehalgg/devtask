@@ -1,0 +1,20 @@
+using System;
+namespace GeologyApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double mass = 5.972e24; // in kilograms
+            double volume = 1.08321e12; // in cubic kilometers
+
+            double density = CalculateDensity(mass, volume);
+            Console.WriteLine($"The density of Earth is {density} kg/m³");
+        }
+
+        static double CalculateDensity(double mass, double volume)
+        {
+            return mass / (volume * 1e9); // converting cubic kilometers to cubic meters
+        }
+    }
+}
